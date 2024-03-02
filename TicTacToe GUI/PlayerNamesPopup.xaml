@@ -1,0 +1,28 @@
+﻿<Window x:Class="TicTacToe_GUI.PlayerNamesPopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTacToe_GUI"
+        mc:Ignorable="d"
+        Title="Enter player names" Height="250" Width="450" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Label FontSize="30" Grid.Column="1">Enter player names:</Label>
+        <Label FontSize="20" VerticalAlignment="Center" Grid.Row="1">Player X:</Label>
+        <TextBox x:Name="PlayerXBox" Text="{Binding Path=PlayerXName, Mode=TwoWay}" FontSize="20" FontStyle="Italic" FontWeight="ExtraLight" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" />
+        <Label FontSize="20" VerticalAlignment="Center" Grid.Row="2">Player O:</Label>
+        <TextBox x:Name="PlayerOBox" Text="{Binding Path=PlayerOName, Mode=TwoWay}" FontSize="20" FontStyle="Italic" FontWeight="ExtraLight" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+        <Button x:Name="buttonNameInput" FontSize="30" Click="nameInputOK" Grid.Row="3" Grid.Column="1">OK</Button>
+        <Label Content="{Binding Path=PlayerXName, Mode=OneWay}"/>
+    </Grid>
+</Window>

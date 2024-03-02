@@ -1,0 +1,27 @@
+AT START, CONSTANT
+* Popup, set player names
+* Score counter 0
+
+INITIALIZATION (of GameLogic object)
+* Reset all values except the Score counter and player names (reset board status, turn counter)
+* Set Activity message: It's player X's turn!
+
+ITERATION
+* Activity: Player XXX turn.
+* Player 1 chooses where to click.
+* Activity: Player XXX clicked on X.
+* Check if Player won.
+	* If won: - show message, and ask if players want to play again; - increase Score counter.
+* Repeat for other player.
+* Increase turn counter.
+
+CLASSES
+* Frontend
+* GameLogic
+
+PROPERTIES/VARIABLES
+* Player names
+* Turn counter
+* Score counter
+* Activity
+* Board status (1-9).

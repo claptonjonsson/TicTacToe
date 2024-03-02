@@ -1,0 +1,26 @@
+﻿<Window x:Class="TicTacToe_GUI.WinPopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTacToe_GUI"
+        mc:Ignorable="d"
+        Title="And the winner is..." Height="230" Width="415" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="380"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Label Content="Current standings are:" Grid.Column="1" HorizontalAlignment="center" Height="30" FontFamily="Courier New" FontSize="14"/>
+        <Label FontSize="14" FontFamily="Century Gothic" HorizontalAlignment="Center" Height="140" Content="{Binding Path=WinMessage, Mode=OneWay}" Grid.Column="1" Grid.Row="1"/>
+        <Button Content="Play again" FontSize="10" Height="30" Width="100" Click="buttonPlayAgain" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left"/>
+        <Button Content="Export standings" FontSize="10" Height="30" Width="120" Click="buttonExportStandings" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center"/>
+        <Button Content="Quit" FontSize="10" Height="30" Width="100" Click="buttonQuit" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right"/>
+    </Grid>
+</Window>

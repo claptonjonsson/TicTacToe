@@ -38,7 +38,7 @@ namespace TicTacToe_GUI
             this.DataContext = InitialGameLogic;
 
             InitialGameLogic.PlayerXName = "Player X";
-            InitialGameLogic.PlayerOName = "Payer O";
+            InitialGameLogic.PlayerOName = "Player O";
 
             InitialGameLogic.SquareOne = "1"; HelperStatic.squareOne = "1";
             InitialGameLogic.SquareTwo = "2"; HelperStatic.squareTwo = "2";
